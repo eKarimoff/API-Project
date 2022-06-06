@@ -17,7 +17,7 @@ class ProductSeeder extends Seeder
             'name'=>'Iphone 13',
             'description'=>'The best seller',
             'price'=>'1000$',
-            'active'=>true,
+            'active'=>false,
             'quantity'=>'12',
             'category_id'=>'1',
         ]);
