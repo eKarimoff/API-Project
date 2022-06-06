@@ -10,7 +10,7 @@ class ProductController extends Controller
     {
         $product = Product::select('id','name','active','description','price','quantity')->where('active','=',1)->with(['category' => function ($q) {
            return $q->select('id','name');
-        }])->get();
+        }])->paginate(5);
         return ['product' => $product];
     }
 }

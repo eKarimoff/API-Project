@@ -13,7 +13,7 @@ class OrderController extends Controller
             return $data->select('order_id','quantity','price', 'product_id')->with(['product' => function($q){
                 return $q->select('id', 'name');
             }]);
-        }])->get();
+        }])->paginate(5);
 
         return ['orders'=>$orders];
     }
