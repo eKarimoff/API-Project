@@ -20,7 +20,8 @@ class CreateProductsTable extends Migration
             $table->string('price');
             $table->boolean('active');
             $table->string('quantity');
-            $table->string('category_id');
+            $table->bigInteger('category_id')->unsigned();
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->timestamps();
         });
     }

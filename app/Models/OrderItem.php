@@ -11,9 +11,9 @@ class OrderItem extends Model
 
     protected $table = 'order_items';
 
-    public function orders()
+    public function order()
     {
-        return $this->hasMany(Order::class);
+        return $this->belongsTo(Order::class);
     }
 
     public function product()
