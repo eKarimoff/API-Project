@@ -22,7 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('/create',[RegisterController::class,'create']); // create a new user
-Route::apiResource('categories', 'App\Http\Controllers\CategoryController');
-// Route::get('/categories',[CategoryController::class,'category']); 
+Route::get('/categories',[CategoryController::class,'category']); 
 Route::get('/products',[ProductController::class,'products']); 
 Route::get('/my-orders',[OrderController::class,'myOrders']); 
